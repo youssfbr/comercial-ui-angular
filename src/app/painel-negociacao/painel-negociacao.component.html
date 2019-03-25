@@ -1,5 +1,23 @@
+{{ oportunidade | json }}
+
 <p-panel header="Nova Oportunidade">
-  Conteúdo
+  <div class="p-grid">
+    <div class="p-col-2">Descrição</div>
+    <div class="p-col-10">
+        <input pInputText type="text" [(ngModel)]="oportunidade.descricao">
+    </div>
+    
+    <div class="p-col-2">Prospecto</div>
+    <div class="p-col-10">
+        <input pInputText type="text" [(ngModel)]="oportunidade.nomeProspecto">
+    </div>
+
+    <div class="p-col-2">Valor</div>
+    <div class="p-col-10">
+        <input pInputText type="text" [(ngModel)]="oportunidade.valor">
+    </div>
+
+  </div>
 </p-panel>
 
 <br>

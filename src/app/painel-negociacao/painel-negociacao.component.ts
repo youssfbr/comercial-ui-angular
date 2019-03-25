@@ -9,6 +9,7 @@ import { OportunidadeService } from '../oportunidade.service';
 })
 export class PainelNegociacaoComponent implements OnInit {
 
+  oportunidade = {};
   oportunidades = [
     //{ descricao: 'PROJETO  de desenov de ERP', nomeProspecto: 'Alisson', valor:1000 },
     // { descricao: 'Manutenção de CRM por 1 ano', nomeProspecto: 'Link', valor: 9000},
