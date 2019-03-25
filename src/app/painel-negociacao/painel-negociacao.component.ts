@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OportunidadeService } from '../oportunidade.service';
+//import { MessageService } from 'primeng/components/common/messageservice';
+import { MessageService } from 'primeng/api';
 
 
 @Component({
@@ -15,7 +17,10 @@ export class PainelNegociacaoComponent implements OnInit {
     // { descricao: 'Manutenção de CRM por 1 ano', nomeProspecto: 'Link', valor: 9000},
    ];
 
-  constructor(private oportunidadeService: OportunidadeService) { }
+  constructor(
+    private oportunidadeService: OportunidadeService,
+    private messageService: MessageService
+    ) { }
 
   ngOnInit() {
     this.consultar();
@@ -30,6 +35,11 @@ export class PainelNegociacaoComponent implements OnInit {
     this.oportunidadeService.adicionar(this.oportunidade).subscribe(() => {
       this.oportunidade = {};
       this.consultar();
+
+      this.messageService.add({
+        severity: 'sucsess',
+        summary: 'Oportunidade adicionada com sucesso'
+      });
     })
   }
 

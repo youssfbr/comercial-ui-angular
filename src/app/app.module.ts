@@ -8,6 +8,7 @@ import { PanelModule } from 'primeng/panel';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 import { AppComponent } from './app.component';
 import { PainelNegociacaoComponent } from './painel-negociacao/painel-negociacao.component';
@@ -28,7 +29,7 @@ import { PainelNegociacaoComponent } from './painel-negociacao/painel-negociacao
     ButtonModule,
     ToastModule,
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
