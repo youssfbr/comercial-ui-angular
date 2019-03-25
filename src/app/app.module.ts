@@ -4,9 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TableModule } from 'primeng/table';
+import { PanelModule } from 'primeng/panel';
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+import { ToastModule } from 'primeng/toast';
 
 import { AppComponent } from './app.component';
-import { from } from 'rxjs';
 import { PainelNegociacaoComponent } from './painel-negociacao/painel-negociacao.component';
 
 @NgModule({
@@ -20,6 +23,10 @@ import { PainelNegociacaoComponent } from './painel-negociacao/painel-negociacao
     FormsModule,
     HttpClientModule,
     TableModule,
+    PanelModule,
+    InputTextModule,
+    ButtonModule,
+    ToastModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
