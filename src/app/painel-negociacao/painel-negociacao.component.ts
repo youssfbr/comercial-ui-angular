@@ -18,8 +18,19 @@ export class PainelNegociacaoComponent implements OnInit {
   constructor(private oportunidadeService: OportunidadeService) { }
 
   ngOnInit() {
+    this.consultar();
+  }
+
+  consultar() {
     this.oportunidadeService.listar()
     .subscribe(resposta => this.oportunidades = <any> resposta)
+  }
+
+  adicionar() {
+    this.oportunidadeService.adicionar(this.oportunidade).subscribe(() => {
+      this.oportunidade = {};
+      this.consultar();
+    })
   }
 
 }

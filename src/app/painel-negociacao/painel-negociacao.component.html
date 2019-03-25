@@ -1,5 +1,3 @@
-{{ oportunidade | json }}
-
 <p-panel header="Nova Oportunidade">
   <div class="p-grid">
     <div class="p-col-2">Descrição</div>
@@ -18,7 +16,7 @@
     </div>
 
     <div class="p-col-10 p-offset-2">
-      <button pButton type="submit" label="Adicionar"></button>
+      <button pButton type="submit" label="Adicionar" (click)="adicionar()"></button>
     </div>
 
 
